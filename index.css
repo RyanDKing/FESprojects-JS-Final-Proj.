@@ -84,6 +84,24 @@ Header
   background-color: rgba(0, 0, 0, 0.765);
 }
 
+.header__row {
+  position: relative;
+}
+
+#filter {
+  border: none;
+  width: 15%;
+  height: 32px;
+  border-radius: 5px;
+  position: absolute;
+  right: 1%;
+  bottom: 2%;
+}
+
+input {
+  direction: ltr;
+}
+
 /* .movie-row {
   display: flex;
   flex-wrap: wrap;
@@ -145,20 +163,21 @@ img {
 .top-picks__row {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.top-picks__movies {
+.top-picks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .movie__card {
-  width: calc(100% / 3.5);
+  width: calc(75% / 3);
+  max-width: 200px;
   display: flex;
   flex-direction: column;
-  line-height: 40px;
+  line-height: 24px;
   background-color: rgba(0, 0, 0, 0.765);
   box-shadow: 0 4px 8px 0 rgba(61, 3, 3, 0.2);
   margin: 10px;

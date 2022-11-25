@@ -10,7 +10,7 @@
       src="https://kit.fontawesome.com/19413891f8.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <section id="landing">
@@ -45,6 +45,7 @@
               Movie Flicks you're been searching for. <br />
               Welcome to GearHead <i class="fa-solid fa-gear fa-1x"></i>
             </h1>
+            <!-- <select id="filter" onchange="filterBooks(event)"></select> -->
           </div>
           <div class="title__search">
             <input class="search__input" type="text" />
@@ -52,6 +53,12 @@
             <button class="btn">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+            <input
+              id="filter"
+              type="number"
+              placeholder="1"
+              onchange="onSearchChange(event)"
+            />
           </div>
         </div>
       </div>
@@ -60,74 +67,15 @@
       <section id="top-picks">
         <div class="top-picks__container">
           <div class="top-picks__row">
-            <div class="top-picks__movies">
-              <div class="movie__card">
+            <div class="top-picks">
+              <!-- <div class="movie__card">
                 <figure class="poster__wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                    class="top-picks--img"
-                  />
+                  <img src="" alt="" class="top-picks--img" />
                 </figure>
                 <h4 class="move__title">Title: Fast Five</h4>
                 <p class="movie__para">Year: 2011</p>
                 <p class="movie__para">Type: movie</p>
-              </div>
-              <div class="movie__card">
-                <figure class="poster__wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                  />
-                </figure>
-                <h4 class="move__title">Title: Fast Five</h4>
-                <p class="movie__para">Year: 2011</p>
-                <p class="movie__para">Type: movie</p>
-              </div>
-              <div class="movie__card">
-                <figure class="poster__wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                  />
-                </figure>
-                <h4 class="move__title">Title: Fast Five</h4>
-                <p class="movie__para">Year: 2011</p>
-                <p class="movie__para">Type: movie</p>
-              </div>
-              <div class="movie__card">
-                <figure class="poster__wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                  />
-                </figure>
-                <h4 class="move__title">Title: Fast Five</h4>
-                <p class="movie__para">Year: 2011</p>
-                <p class="movie__para">Type: movie</p>
-              </div>
-              <div class="movie__card">
-                <figure class="poster__wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                  />
-                </figure>
-                <h4 class="move__title">Title: Fast Five</h4>
-                <p class="movie__para">Year: 2011</p>
-                <p class="movie__para">Type: movie</p>
-              </div>
-              <div class="movie__card">
-                <figure class="poster__wrapper">
-                  <img
-                    src="https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg"
-                    alt=""
-                  />
-                </figure>
-                <h4 class="move__title">Title: Fast Five</h4>
-                <p class="movie__para">Year: 2011</p>
-                <p class="movie__para">Type: movie</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
