@@ -80,13 +80,11 @@ Header
 
 */
 
-.header__container,
-#release2022 {
+.header__containercl {
   background-color: rgba(0, 0, 0, 0.765);
 }
 
-.header__row,
-#release2022 {
+.header__row {
   position: relative;
 }
 
@@ -168,8 +166,7 @@ img {
   justify-content: space-around;
 }
 
-.top-picks,
-#release2022 {
+.top-picks {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -203,11 +200,4 @@ img {
 .movie__para {
   padding-left: 4px;
   color: aliceblue;
-}
-
-.header__2022 {
-  padding-top: 72px;
-  text-align: center;
-  color: white;
-  font-size: 22px;
 }
