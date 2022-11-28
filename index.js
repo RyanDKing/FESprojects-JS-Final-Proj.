@@ -6,18 +6,27 @@ const movieList = document.querySelector(".top-picks");
 const id = localStorage.getItem("id");
 console.log(id);
 
-async function main(search, id) {
-  const url = `https://omdbapi.com/?s=${search}&page=${id}&apikey=857ca5ce`;
-  const urlRes = await fetch(`${url}`);
-  const data = await urlRes.json();
-  console.log(id);
-
-  movieList.innerHTML = data.Search.map((movie) => mvDataHTML(movie)).join("");
-}
-
 async function onSearchChange(event) {
   const id = event.target.value;
   main(id);
+  console.log(id);
+}
+
+async function main(search, id) {
+  let url = `https://omdbapi.com/?s=${search}&page=${id}&apikey=857ca5ce`;
+  let res = await fetch(`${url}`);
+  const data = await res.json();
+  movieList.innerHTML = data.Search.map((movie) => mvDataHTML(movie)).join("");
+}
+
+function findMovies() {
+  let page = searchResult.value.trim();
+  if (search.length > 0) {
+    searchList.classList.remove("hide-search-list");
+    main((search = "fast"));
+  } else {
+    searchList.classList.add("hide-search-list");
+  }
 }
 
 function movieLoad(searchResult) {

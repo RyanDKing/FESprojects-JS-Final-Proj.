@@ -80,11 +80,13 @@ Header
 
 */
 
-.header__container {
+.header__container,
+#release2022 {
   background-color: rgba(0, 0, 0, 0.765);
 }
 
-.header__row {
+.header__row,
+#release2022 {
   position: relative;
 }
 
@@ -166,7 +168,8 @@ img {
   justify-content: space-around;
 }
 
-.top-picks {
+.top-picks,
+#release2022 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -174,7 +177,8 @@ img {
 
 .movie__card {
   width: calc(75% / 3);
-  max-width: 200px;
+  max-width: 195px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   line-height: 24px;
@@ -199,4 +203,11 @@ img {
 .movie__para {
   padding-left: 4px;
   color: aliceblue;
+}
+
+.header__2022 {
+  padding-top: 72px;
+  text-align: center;
+  color: white;
+  font-size: 22px;
 }
