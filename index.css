@@ -7,8 +7,12 @@
   font-family: "roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: antiquewhite;
+  background-color: rgb(26, 26, 25);
 }
 
 #landing {
@@ -22,7 +26,7 @@ body {
 }
 
 .fa-couch {
-  color: rgb(244, 40, 40);
+  color: rgba(244, 40, 40, 0.625);
   font-size: 32px;
 }
 
@@ -60,6 +64,7 @@ body {
 
 .nav__title {
   padding-left: 16px;
+  color: #dddddd;
 }
 
 .break__title {
@@ -74,7 +79,7 @@ body {
 .nav__link {
   margin-left: 24px;
   text-decoration: none;
-  color: #000;
+  color: #dddddd;
   font-weight: 700;
 }
 
@@ -90,7 +95,7 @@ Header
 */
 
 .header__container {
-  background-color: rgba(0, 0, 0, 0.765);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .header__row {
@@ -167,30 +172,30 @@ img {
   Main
 */
 .top-picks__container {
-  padding: 24px;
+  padding: 44px 122px;
+  display: flex;
+  justify-content: center;
 }
 
 .top-picks__row {
   width: 100%;
-  margin: 0 auto;
-  /* display: flex;
-  justify-content: space-around; */
 }
 
 .top-picks {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .movie__card {
-  width: calc(100% / 5);
+  width: 100%;
   max-width: 240px;
-  padding: 16px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   line-height: 24px;
-  background-color: rgba(0, 0, 0, 0.765);
+  background-color: rgba(206, 39, 39, 0.34);
   box-shadow: 0 4px 8px 0 rgba(61, 3, 3, 0.2);
   margin: 10px;
   transition: 0.3s;
@@ -198,10 +203,9 @@ img {
   border-radius: 10px;
 }
 
-/* .top-picks--img {
-  width: 180px;
-  height: auto;
-} */
+.movie__card:hover {
+  transform: scale(0.955);
+}
 
 .poster__wrapper {
   text-align: center;
@@ -211,4 +215,17 @@ img {
 .movie__para {
   padding-left: 4px;
   color: aliceblue;
+}
+
+/* Small Phones, tablets, large smartphones */
+@media (max-width: 768px) {
+  .movie__card {
+    width: calc(100% / 2);
+    max-width: 240px;
+  }
+
+  .move__title,
+  .movie__para {
+    font-size: 14px;
+  }
 }

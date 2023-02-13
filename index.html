@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GearHead Movies</title>
     <link rel="stylesheet" href="./index.css" />
-    <link rel="home" href="/home.html" />
     <script
       src="https://kit.fontawesome.com/19413891f8.js"
       crossorigin="anonymous"
@@ -26,9 +25,7 @@
             </div>
             <div class="nav__links-list">
               <ul class="nav__links">
-                <li><a href="./home" class="nav__link">Home</a></li>
-                <li><a href="" class="nav__link">Movies</a></li>
-                <li><a href="" class="nav__link">Contact</a></li>
+                <li><a href="/" class="nav__link">Home</a></li>
               </ul>
             </div>
           </div>
@@ -58,11 +55,7 @@
               placeholder="1"
               onchange="onSearchChange(event)"
             /> -->
-            <select
-              class="filter"
-              onchange="onSearchChange(event)"
-              onclick="clearResult()"
-            >
+            <select class="filter" onchange="onSearchChange(event)">
               <option value="1" selected>Page 1</option>
               <option value="2">Page 2</option>
               <option value="3">Page 3</option>
