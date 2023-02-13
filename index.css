@@ -8,20 +8,29 @@
 }
 
 body {
+  background-color: antiquewhite;
 }
 
 #landing {
   /* min-height: 100vh; */
 }
 
-.fa-gear {
+.loading {
+  display: none;
   color: red;
+  font-size: 32px;
 }
 
-.fa-gear {
+.fa-couch {
+  color: rgb(244, 40, 40);
+  font-size: 32px;
+}
+
+.fa-couch,
+.fa-spinner {
   /* transform: rotate(1200deg);
   transition: infinite all 33s ease; */
-  animation: rotate 0.2s ease infinite;
+  animation: rotate 1s ease-in;
 }
 
 @keyframes rotate {
@@ -88,7 +97,7 @@ Header
   position: relative;
 }
 
-#filter {
+.filter {
   border: none;
   width: 15%;
   height: 32px;
@@ -102,10 +111,11 @@ input {
   direction: ltr;
 }
 
-/* .movie-row {
-  display: flex;
-  flex-wrap: wrap;
-} */
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
 
 .movie {
   width: 50%;
@@ -122,7 +132,7 @@ img {
 .header__title {
   padding-top: 72px;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 .title__search {
@@ -140,7 +150,7 @@ img {
   height: 36px;
   margin-right: 12px;
   padding: 0 9px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid rgba(7, 2, 2, 0.98);
   font-style: bold;
   font-size: 16px;
@@ -162,19 +172,20 @@ img {
 
 .top-picks__row {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: space-around; */
 }
 
 .top-picks {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .movie__card {
-  width: calc(75% / 3);
-  max-width: 195px;
+  width: calc(100% / 5);
+  max-width: 240px;
   padding: 16px;
   display: flex;
   flex-direction: column;

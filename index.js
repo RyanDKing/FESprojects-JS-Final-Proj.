@@ -3,37 +3,43 @@
 
 const searchResult = document.querySelector(".search__input");
 const movieList = document.querySelector(".top-picks");
-const id = localStorage.getItem("id");
-console.log(id);
+const loadState = document.querySelector(".loading");
+
+function clearResult() {
+  document.querySelector(".filter").value = "1";
+}
 
 async function onSearchChange(event) {
   const id = event.target.value;
-  main(id);
-  console.log(id);
+  main(searchResult.value, id);
+  console.log(document.querySelector(".filter"));
 }
 
 async function main(search, id) {
   let url = `https://omdbapi.com/?s=${search}&page=${id}&apikey=857ca5ce`;
   let res = await fetch(`${url}`);
   const data = await res.json();
-  movieList.innerHTML = data.Search.map((movie) => mvDataHTML(movie)).join("");
-}
+  console.log(data);
+  loadState.style.display = "inline";
 
-function findMovies() {
-  let page = searchResult.value.trim();
-  if (search.length > 0) {
-    searchList.classList.remove("hide-search-list");
-    main((search = "fast"));
-  } else {
-    searchList.classList.add("hide-search-list");
+  let moviesFilters = data.Search;
+  for (let i = 0; i <= moviesFilters; i++) {
+    if (moviesFilters[i] != "game") {
+      console.log(moviesFilters[i]);
+    }
   }
+  console.log(moviesFilters);
+  console.log(data);
+  movieList.innerHTML = data.Search.map((movies) => mvDataHTML(movies)).join(
+    ""
+  );
 }
 
-function movieLoad(searchResult) {
+function movieLoad() {
   return (window.onload = () => {
-    const searchField = document.querySelector(".search__input");
-    document.querySelector(".btn").onclick = (movie) => {
-      main(searchField.value);
+    document.querySelector(".btn").onclick = () => {
+      main(searchResult.value);
+      clearResult();
     };
   });
 }
@@ -56,4 +62,12 @@ function mvDataHTML(movie) {
 </div>`;
 }
 
-movieLoad("id");
+movieLoad();
+
+// how reset option in html?
+
+{
+  /* <input id="result" type="text" />
+<input type="button" value="Reset" onclick="clearResult()">
+ */
+}
